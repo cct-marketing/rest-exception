@@ -56,7 +56,12 @@ class ApiGatewayExceptionHandler implements ExceptionHandlerInterface
      */
     protected function validContentType(array $contentType): bool
     {
-        return in_array('application/json', $contentType, false);
+        foreach($contentType as $line){
+            if(false !== strpos($line, 'application/json')){
+                return true;
+            }
+        }
+        return false;
     }
 
     /**
