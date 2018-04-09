@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace CCT\Component\RestExceptionHandler;
 
+use CCT\Component\RestExceptionHandler\Request\Handler\ExceptionHandlerInterface;
 use \Exception;
 use function call_user_func_array;
 
@@ -58,6 +59,12 @@ class ExceptionDecorator
     protected function handleException($exception): void
     {
         foreach ($this->exceptionHandlers as $exceptionHandler) {
+            if (!$exceptionHandler instanceof ExceptionHandlerInterface) {
+                throw new \RuntimeException(
+                    'Exception handler must be an instance of ' . ExceptionHandlerInterface::class
+                );
+            }
+
             if (false === $exceptionHandler->supports($exception)) {
                 continue;
             }

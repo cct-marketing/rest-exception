@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace CCT\Component\RestExceptionHandler\Handlers;
+namespace CCT\Component\RestExceptionHandler\Request\Handler;
 
-use CCT\Component\RestExceptionHandler\Exception\ApiBadRequestException;
-use CCT\Component\RestExceptionHandler\Exception\ApiRequestException;
+use CCT\Component\RestExceptionHandler\Request\Exception\ApiBadRequestException;
+use CCT\Component\RestExceptionHandler\Request\Exception\ApiRequestException;
 use Exception;
 use GuzzleHttp\Exception\RequestException;
 use Psr\Http\Message\ResponseInterface;
@@ -17,8 +17,8 @@ class ApiRequestExceptionHandler implements ExceptionHandlerInterface
      * @param Exception|RequestException $exception
      *
      * @return mixed
-     * @throws \CCT\Component\RestExceptionHandler\Exception\ApiBadRequestException
-     * @throws \CCT\Component\RestExceptionHandler\Exception\ApiRequestException
+     * @throws \CCT\Component\RestExceptionHandler\Request\Exception\ApiBadRequestException
+     * @throws \CCT\Component\RestExceptionHandler\Request\Exception\ApiRequestException
      * @throws \GuzzleHttp\Exception\RequestException
      */
     public function handle(Exception $exception): void

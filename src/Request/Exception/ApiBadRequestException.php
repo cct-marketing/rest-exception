@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CCT\Component\RestExceptionHandler\Exception;
+namespace CCT\Component\RestExceptionHandler\Request\Exception;
 
 use Throwable;
 

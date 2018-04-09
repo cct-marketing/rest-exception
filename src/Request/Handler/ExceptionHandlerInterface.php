@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CCT\Component\RestExceptionHandler\Handlers;
+namespace CCT\Component\RestExceptionHandler\Request\Handler;
 
 use Exception;
 

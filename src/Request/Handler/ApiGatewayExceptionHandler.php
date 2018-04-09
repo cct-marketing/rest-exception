@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CCT\Component\RestExceptionHandler\Handlers;
+namespace CCT\Component\RestExceptionHandler\Request\Handler;
 
-use CCT\Component\RestExceptionHandler\Exception\ApiGatewayException;
+use CCT\Component\RestExceptionHandler\Request\Exception\ApiGatewayException;
 use Exception;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\Response;
@@ -18,7 +18,7 @@ class ApiGatewayExceptionHandler implements ExceptionHandlerInterface
      *
      * @return void
      * @throws \GuzzleHttp\Exception\RequestException
-     * @throws \CCT\Component\RestExceptionHandler\Exception\ApiGatewayException
+     * @throws \CCT\Component\RestExceptionHandler\Request\Exception\ApiGatewayException
      */
     public function handle(Exception $exception): void
     {
