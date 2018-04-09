@@ -9,7 +9,6 @@ use Exception;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\Response;
 use Psr\Http\Message\ResponseInterface;
-use function in_array;
 
 class ApiGatewayExceptionHandler implements ExceptionHandlerInterface
 {
@@ -56,8 +55,8 @@ class ApiGatewayExceptionHandler implements ExceptionHandlerInterface
      */
     protected function validContentType(array $contentType): bool
     {
-        foreach($contentType as $line){
-            if(false !== strpos($line, 'application/json')){
+        foreach ($contentType as $line) {
+            if (false !== strpos($line, 'application/json')) {
                 return true;
             }
         }
