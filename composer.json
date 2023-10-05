@@ -3,8 +3,8 @@
     "description": "An exception handler used to handle and parse all errors from the rest lib requests",
     "type": "library",
     "require": {
-        "php": "~7.4 | ~8.0",
-        "guzzlehttp/guzzle": "~7.0"
+        "php": "~7.4|~8.0",
+        "guzzlehttp/guzzle": "~6.5|~7.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.0"
